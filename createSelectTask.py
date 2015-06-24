@@ -7,6 +7,8 @@ print
 
 __author__ = 'charoy'
 
+githubpath="https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/select/"
+
 def merge(imgs,newimg):
     band_size = 30
     images = map(Image.open,imgs)
@@ -36,8 +38,35 @@ def merge(imgs,newimg):
 
     result.save(newimg)
 
+import itertools
+def findsubsets(S,m):
+    return set(itertools.combinations(S, m))
+
+def createtasks(path,taskfile):
+    imgpath=path+"/*_n.jpg"
+    images=glob.glob(imgpath)
+    result=findsubsets(images,2)
+    dirname=os.path.split(path)[1]
+    print(dirname)
+    count=0;
+    for s in result:
+        merge(s,path+"/result"+str(count)+".jpg")
+        taskfile.write("2;"+githubpath+dirname+"/result"+str(count)+".jpg\n")
+        count+=1
+
+
+def createcsv(path,taskfile):
+    tasklist=glob.glob(path+"/*")
+    print(tasklist)
+    count=1;
+    for i in tasklist:
+        createtasks(i,taskfile)
 
 
 if __name__ == "__main__":
     images=glob.glob("C:/Users/charoy/PyCharmProject/mycitizensourcing/corpus/select/1/*_n.jpg")
     merge(images,"C:/Users/charoy/PyCharmProject/mycitizensourcing/corpus/select/1/result1.jpg")
+    taskfile=open("C:/Users/charoy/PyCharmProject/mycitizensourcing/corpus/select/task.csv","w")
+    taskfile.write("len;img\n")
+    createcsv("C:/Users/charoy/PyCharmProject/mycitizensourcing/corpus/select",taskfile)
+    taskfile.close()
