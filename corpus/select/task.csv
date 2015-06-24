@@ -1,7 +1,7 @@
-len;img
-2;https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/select/1/result0.jpg
-2;https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/select/1/result1.jpg
-2;https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/select/1/result2.jpg
-2;https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/select/2/result0.jpg
-2;https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/select/2/result1.jpg
-2;https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/select/2/result2.jpg
+len,img
+2,https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/select/1/result0.jpg
+2,https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/select/1/result1.jpg
+2,https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/select/1/result2.jpg
+2,https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/select/2/result0.jpg
+2,https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/select/2/result1.jpg
+2,https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/select/2/result2.jpg

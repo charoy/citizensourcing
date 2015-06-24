@@ -51,7 +51,7 @@ def createtasks(path,taskfile):
     count=0;
     for s in result:
         merge(s,path+"/result"+str(count)+".jpg")
-        taskfile.write("2;"+githubpath+dirname+"/result"+str(count)+".jpg\n")
+        taskfile.write("2,"+githubpath+dirname+"/result"+str(count)+".jpg\n")
         count+=1
 
 
@@ -67,6 +67,6 @@ if __name__ == "__main__":
     images=glob.glob("C:/Users/charoy/PyCharmProject/mycitizensourcing/corpus/select/1/*_n.jpg")
     merge(images,"C:/Users/charoy/PyCharmProject/mycitizensourcing/corpus/select/1/result1.jpg")
     taskfile=open("C:/Users/charoy/PyCharmProject/mycitizensourcing/corpus/select/task.csv","w")
-    taskfile.write("len;img\n")
+    taskfile.write("len,img\n")
     createcsv("C:/Users/charoy/PyCharmProject/mycitizensourcing/corpus/select",taskfile)
     taskfile.close()
