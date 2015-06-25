@@ -29,7 +29,7 @@ def merge(imgs,newimg):
 
     w += (len(images) -1) * band_size
 
-    result = Image.new("RGBA", (w, mh))
+    result = Image.new("RGBA", (w, mh),"white")
 
     x = 0
     for i in out_images:
