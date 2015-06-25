@@ -3,7 +3,6 @@ import os, sys
 from PIL import Image
 import time
 import glob
-print
 
 __author__ = 'charoy'
 
@@ -65,7 +64,6 @@ def createcsv(path,taskfile):
 
 if __name__ == "__main__":
     images=glob.glob("C:/Users/charoy/PyCharmProject/mycitizensourcing/corpus/select/1/*_n.jpg")
-    merge(images,"C:/Users/charoy/PyCharmProject/mycitizensourcing/corpus/select/1/result1.jpg")
     taskfile=open("C:/Users/charoy/PyCharmProject/mycitizensourcing/corpus/select/task.csv","w")
     taskfile.write("len,img\n")
     createcsv("C:/Users/charoy/PyCharmProject/mycitizensourcing/corpus/select",taskfile)
