@@ -42,7 +42,7 @@ def findsubsets(S,m):
     return set(itertools.combinations(S, m))
 
 def createtasks(path,taskfile):
-    imgpath=path+"/*_n.jpg"
+    imgpath=path+"/*_*.jpg"
     images=glob.glob(imgpath)
     result=findsubsets(images,2)
     dirname=os.path.split(path)[1]
