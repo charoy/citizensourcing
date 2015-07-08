@@ -35,20 +35,7 @@
 -->
 <div class="row skeleton"> <!-- Start Skeleton Row-->
     <div class="span12 "><!-- Start of Question and Submission DIV (column) -->
-        <h1 id="question"><span id="i18n_question">According to you what is the level of damage in this area ?</span></h1> <!-- The question will be loaded here -->
-        
-        <div id="answer"> <!-- Start DIV for the submission buttons -->
-        <div class="row" style="margin-top:10px; margin-bottom:10px">
-            <div class="span1"><img src="https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/assess/9495240903_25b34862a6_k.jpg"></div>
-            <div class="span4"></div>
-            <div class="span1"><img src="https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/assess/9495240903_25b34862a6_k.jpg" ></div>
-        </div>
-        </div>
-        <div class="span6"><div id="slider"></div></div>
-
-        <button class="btn btn-answer" >submit</button>
-      
-        <!-- Feedback items for the user -->
+                <!-- Feedback items for the user -->
         <p><span id="i18n_working_task">You are working now on task:</span> <span id="task-id" class="label label-warning">#</span></p>
         <p><span id="i18n_tasks_completed">You have completed:</span> <span id="done" class="label label-info"></span> <span id="i18n_tasks_from">tasks from</span>
         <!-- Progress bar for the user -->
@@ -56,6 +43,20 @@
         <div class="progress progress-striped">
             <div id="progress" rel="tooltip" title="#" class="bar" style="width: 0%;"></div>
         </div>
+
+        <h1 id="question"><span id="i18n_question">According to you what is the level of damage in this area ?</span></h1> <!-- The question will be loaded here -->
+        
+        <div id="answer"> <!-- Start DIV for the submission buttons -->
+        <div class="row" style="margin-top:10px; margin-bottom:10px">
+            <div class="span2"><img src="https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/assess/9495240903_25b34862a6_k.jpg"></div>
+            <div class="span4"></div>
+            <div class="span2"><img src="https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/assess/9495240903_25b34862a6_k.jpg" ></div>
+        </div>
+        </div>
+        <div class="span6"><div id="slider"></div></div><p></p>
+
+        <button class="btn btn-answer" >submit</button>
+      
         <!--
             This project uses Disqus to allow users to provide some feedback.
             The next section includes a button that when a user clicks on it will
