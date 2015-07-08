@@ -1,6 +1,7 @@
 <!-- Template adapted from "Image Template" proposed by PyBossa Community-->
 <div class="row" xmlns:https="http://www.w3.org/1999/xhtml">
     <!-- Success and Error Messages for the user --> 
+    <!-- Success and Error Messages for the user -->
     <div class="span6 offset2" style="height:50px">
         <div id="success" class="alert alert-success" style="display:none;">
             <a class="close">×</a>
@@ -103,8 +104,8 @@ var messages = {"en": {
                         "i18n_working_task": "You are working now on task:",
                         "i18n_tasks_completed": "You have completed:",
                         "i18n_tasks_from": "tasks from",
- //                       "i18n_show_comments": "Show comments:",
- //                      "i18n_hide_comments": "Hide comments:",
+                        "i18n_show_comments": "Show comments:",
+                       "i18n_hide_comments": "Hide comments:",
                         "i18n_question": "According to you what is the status of this area ?",
                       }
                };
@@ -168,7 +169,7 @@ pybossa.presentTask(function(task, deferred) {
                 //if ($("#disqus_thread").is(":visible")) {
                 //    $('#disqus_thread').toggle();
                 //    $('.btn-disqus').toggle();
-                }
+                //}
             }
             else {
                 $("#error").show();
