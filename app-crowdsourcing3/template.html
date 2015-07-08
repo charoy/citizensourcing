@@ -117,13 +117,13 @@ var messages = {"en": {
         animate: "fast"
      });
 });
-function i18n_translate() {
-    var ids = Object.keys(messages[userLocale])
-    for (i=0; i<ids.length; i++) {
-        console.log("Translating: " + ids[i]);
-        document.getElementById(ids[i]).innerHTML = messages[userLocale][ids[i]];
-    }
-}
+//function i18n_translate() {
+//    var ids = Object.keys(messages[userLocale])
+//    for (i=0; i<ids.length; i++) {
+//        console.log("Translating: " + ids[i]);
+//        document.getElementById(ids[i]).innerHTML = messages[userLocale][ids[i]];
+//    }
+//}
 function loadUserProgress() {
     pybossa.userProgress('crowdsourcing3').done(function(data){
         var pct = Math.round((data.done*100)/data.total);
