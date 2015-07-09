@@ -10,7 +10,7 @@ __author__ = 'charoy'
 githubpath="https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/assess/"
 
 def createcsv(path,taskfile):
-    tasklist=glob.glob(path+"/*_*.jpg")
+    tasklist=glob.glob(path+"/*.jpg")
     print(tasklist)
     count=1;
 
