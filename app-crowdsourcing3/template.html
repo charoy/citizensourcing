@@ -62,10 +62,10 @@
             The next section includes a button that when a user clicks on it will
             load the comments, if any, for the given task
         -->
-        <!-- <div id="disqus_show_btn" style="margin-top:5px">
-            <button class="btn btn-primary btn-large btn-disqus" onclick="loadDisqus()"><i class="icon-comments"></i> <span id="i18n_show_comments">Show comments</span></button>
-            <button class="btn btn-large btn-disqus" onclick="loadDisqus()" style="display:none"><i class="icon-comments"></i> <span id="i18n_hide_comments">Hide comments</span></button>
-        </div> -->
+        <div id="disqus_show_btn" style="margin-top:5px; display:none">
+            <button class="btn btn-primary btn-large btn-disqus" style="display:none"><i class="icon-comments"></i> <span id="i18n_show_comments">Show comments</span></button>
+            <button class="btn btn-large btn-disqus"  style="display:none"><i class="icon-comments"></i> <span id="i18n_hide_comments">Hide comments</span></button>
+        </div>
         <div id="disqus_thread" style="margin-top:5px;display:none"></div>
     </div><!-- End of Question and Submission DIV (column) -->
         <a id="photo-link" href="#">
@@ -118,13 +118,13 @@ var messages = {"en": {
         animate: "fast"
      });
 });
-// function i18n_translate() {
-//     var ids = Object.keys(messages[userLocale])
-//     for (i=0; i<ids.length; i++) {
-//         console.log("Translating: " + ids[i]);
-//         document.getElementById(ids[i]).innerHTML = messages[userLocale][ids[i]];
-//     }
-// }
+function i18n_translate() {
+    var ids = Object.keys(messages[userLocale])
+    for (i=0; i<ids.length; i++) {
+        console.log("Translating: " + ids[i]);
+        document.getElementById(ids[i]).innerHTML = messages[userLocale][ids[i]];
+    }
+}
 
 function loadUserProgress() {
     pybossa.userProgress('crowdsourcing3').done(function(data){
@@ -167,10 +167,6 @@ pybossa.presentTask(function(task, deferred) {
                     deferred.resolve();
                 });
                 $("#loading").fadeIn(500);
-                // if ($("#disqus_thread").is(":visible")) {
-                //     $('#disqus_thread').toggle();
-                //     $('.btn-disqus').toggle();
-                // }
             }
             else {
                 $("#error").show();
