@@ -54,7 +54,10 @@
             </div>
             <div class="row" style="margin-top:10px; margin-bottom:10px">
                 <div class="span6">
-                    <div id="slider" style="height: 100px;cursor: pointer"></div>
+                    <div id="slider" style="height:150px;cursor:pointer"></div>
+                </div>
+                <div class="span4">
+                <button class="btn btn-primary btn-large btn-answer btn-disqus">submit</button>
                 </div>
             </div>
             <div class="row" style="margin-top:10px; margin-bottom:10px">
@@ -86,9 +89,7 @@
         <a id="photo-link" href="#">
             <img id="photo" src="http://i.imgur.com/GeHxzb7.png" style="max-width=100%">
         </a>
-            <div class="span4">
-                <button class="btn btn-primary btn-large btn-answer btn-disqus">submit</button>
-            </div>
+
         <div id="disqus_show_btn" style="margin-top:5px; display:none">
             <button class="btn btn-primary btn-large btn-disqus" style="display:none"><i
                     class="icon-comments"></i> <span id="i18n_show_comments">Show comments</span></button>
@@ -181,7 +182,7 @@
                     // continue as soon as the image is loaded
                     deferred.resolve(task);
                 });
-                img.attr('src', task.info.img).css('height', 460);
+                //img.attr('src', task.info.img).css('height', 460);
                 img.addClass('img-polaroid');
                 task.info.image = img;
             }
