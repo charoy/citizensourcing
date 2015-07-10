@@ -134,7 +134,7 @@ function i18n_translate() {
 }
 
 function loadUserProgress() {
-    pybossa.userProgress('crowdsourcing3').done(function(data){
+    pybossa.userProgress('crowdsourcing4').done(function(data){
         var pct = Math.round((data.done*100)/data.total);
         $("#progress").css("width", pct.toString() +"%");
         $("#progress").attr("title", pct.toString() + "% completed!");
@@ -188,5 +188,5 @@ pybossa.presentTask(function(task, deferred) {
         $("#finish").fadeIn(500);
     }
 });
-pybossa.run('crowdsourcing3');
+pybossa.run('crowdsourcing4');
 </script>
