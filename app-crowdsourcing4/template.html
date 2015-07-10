@@ -48,13 +48,17 @@
         <h1 id="question"><span id="i18n_question">According to you what is the level of damage in this area ?</span></h1> <!-- The question will be loaded here -->
         
         <div id="answer"> <!-- Start DIV for the submission buttons -->
-        <div class="row" style="margin-top:10px; margin-bottom:10px">
-            <div class="span3"><img src="https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/assess/anchor1.jpg"></div>
-            <div class="span4"></div>
-            <div class="span3"><img src="https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/assess/anchor2.jpg" ></div>
+            <div class="row" style="margin-top:10px; margin-bottom:10px">
+                <div class="span12"><img src="https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/assess/anchor1.jpg" style="max-width:20%;"></div>
+            </div>
+            <div class="row" style="margin-top:10px; margin-bottom:10px">
+                <div class="span12"><div id="slider"></div></div>
+            </div>
+            <div class="row" style="margin-top:10px; margin-bottom:10px">
+                <div class="span12"><img src="https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/assess/anchor2.jpg" style="max-width:20%;" ></div>
+            </div>
         </div>
-        </div>
-        <div class="span9"><div id="slider"></div></div>
+        
         <div class="span6"><button class="btn btn-primary btn-large btn-answer btn-disqus" >submit</button></div>
       
         <!--
@@ -71,7 +75,7 @@
         <a id="photo-link" href="#">
             <img id="photo" src="http://i.imgur.com/GeHxzb7.png" style="max-width=100%">
         </a>
-        </div><!-- End of Question and Submission DIV (column) -->
+        <!-- End of Question and Submission DIV (column) -->
 </div><!-- End of Skeleton Row -->
 
 <script type="text/javascript">
