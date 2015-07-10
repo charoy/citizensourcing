@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-md-12">
+        <div id="modal" class="modal hide fade">
+            <div class="modal-header">
+                <h3>Damage Assessment</h3>
+            </div>
+            <div id="0" class="modal-body" style="display:none">
+                <p><strong>Here you will be ask to assess the level of damages that you will be able to see on a picture
+               </p> 
+            </div>
+            <div id="1" class="modal-body" style="display:none">
+                <p>The application is really simple. It loads a photo  and asks you this question: <strong>What is the level of damage in this photo</strong></p>
+                <img src="https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/assess/16118050309_4a409ba5c3_k.jpg
+" class="img-thumbnail"/>
+                <p>You will have to grade it by selecting the level of damage using the slider and press the submit button to send your answer
+                </p>
+                <p>
+                </p>
+                <p>Thank you</p>
+            </div>
+            <div class="modal-footer">
+                <a id="prevBtn" href="#" onclick="showStep('prev')" class="btn">Previous</a>
+                <a id="nextBtn" href="#" onclick="showStep('next')" class="btn btn-success">Next</a>
+                <a id="startContrib" href="../crowdsourcing3/newtask" class="btn btn-primary" style="display:none"><i class="fa fa-thumbs-o-up"></i> I agree with the condition!</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var step = -1;
+    function showStep(action) {
+        $("#" + step).hide();
+        if (action == 'next') {
+            step = step + 1;
+        }
+        if (action == 'prev') {
+            step = step - 1;
+        }
+        if (step == 0) {
+            $("#prevBtn").hide();
+        }
+        else {
+            $("#prevBtn").show();
+        }
+
+        if (step == 1 ) {
+            $("#nextBtn").hide();
+            $("#startContrib").show();
+        }
+        $("#" + step).show();
+    }
+
+    showStep('next');
+    $("#modal").modal('show');
+</script>
