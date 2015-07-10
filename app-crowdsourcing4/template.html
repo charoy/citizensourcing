@@ -35,51 +35,69 @@
     task.
 -->
 <div class="row skeleton"> <!-- Start Skeleton Row-->
-     <div class="row">
-    <div class="span12 "><!-- Start of Question and Submission DIV (column) -->
-                <!-- Feedback items for the user -->
-        <span id="i18n_working_task">You are working now on task:</span> <span id="task-id" class="label label-warning">#</span>
-        <span id="i18n_tasks_completed">You have completed:</span> <span id="done" class="label label-info"></span> <span id="i18n_tasks_from">tasks from</span>
-        <!-- Progress bar for the user -->
-        <span id="total" class="label label-inverse"></span></p>
-        <div class="progress progress-striped">
-            <div id="progress" rel="tooltip" title="#" class="bar" style="width: 0%;"></div>
-        </div>
+    <div class="row">
+        <div class="span12 "><!-- Start of Question and Submission DIV (column) -->
+            <!-- Feedback items for the user -->
+            <span id="i18n_working_task">You are working now on task:</span> <span id="task-id"
+                                                                                   class="label label-warning">#</span>
+            <span id="i18n_tasks_completed">You have completed:</span> <span id="done" class="label label-info"></span>
+            <span id="i18n_tasks_from">tasks from</span>
+            <!-- Progress bar for the user -->
+            <span id="total" class="label label-inverse"></span></p>
+            <div class="progress progress-striped">
+                <div id="progress" rel="tooltip" title="#" class="bar" style="width: 0%;"></div>
+            </div>
 
-        <h1 id="question"><span id="i18n_question">According to you what is the level of damage in this area ?</span></h1> <!-- The question will be loaded here -->
-        
-        <div id="answer"> <!-- Start DIV for the submission buttons -->
-            <div class="row" style="margin-top:10px; margin-bottom:10px">
-                <div class="span12"><img src="https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/assess/anchor1.jpg" style="max-width:20%;"></div>
+            <h1 id="question"><span
+                    id="i18n_question">According to you what is the level of damage in this area ?</span></h1>
+            <!-- The question will be loaded here -->
+
+            <div id="answer"> <!-- Start DIV for the submission buttons -->
+                <div class="row" style="margin-top:10px; margin-bottom:10px">
+                    <div class="span6"><img
+                            src="https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/assess/anchor1.jpg"
+                            style="max-width:20%;"></div>
+                </div>
+                <div class="row" style="margin-top:10px; margin-bottom:10px">
+                    <div class="span6">
+                        <div id="slider"></div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:10px; margin-bottom:10px">
+                    <div class="span6"><img
+                            src="https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/assess/anchor2.jpg"
+                            style="max-width:20%;"></div>
+                </div>
             </div>
-            <div class="row" style="margin-top:10px; margin-bottom:10px">
-                <div class="span12"><div id="slider"></div></div>
-            </div>
-            <div class="row" style="margin-top:10px; margin-bottom:10px">
-                <div class="span12"><img src="https://raw.githubusercontent.com/charoy/citizensourcing/master/corpus/assess/anchor2.jpg" style="max-width:20%;" ></div>
+
+            <div class="span6">
+                <button class="btn btn-primary btn-large btn-answer btn-disqus">submit</button>
             </div>
         </div>
-        
-        <div class="span6"><button class="btn btn-primary btn-large btn-answer btn-disqus" >submit</button></div>
-      
-        <!--
-            This project uses Disqus to allow users to provide some feedback.
-            The next section includes a button that when a user clicks on it will
-            load the comments, if any, for the given task
-        -->
-         <div class="row" style="margin-top:10px; margin-bottom:10px;">
+    </div>
+
+    <!--
+        This project uses Disqus to allow users to provide some feedback.
+        The next section includes a button that when a user clicks on it will
+        load the comments, if any, for the given task
+    -->
+    <div class="row" style="margin-top:10px; margin-bottom:10px;">
         <a id="photo-link" href="#">
             <img id="photo" src="http://i.imgur.com/GeHxzb7.png" style="max-width=100%">
         </a>
-         <div id="disqus_show_btn" style="margin-top:5px; display:none">
-            <button class="btn btn-primary btn-large btn-disqus" style="display:none"><i class="icon-comments"></i> <span id="i18n_show_comments">Show comments</span></button>
-            <button class="btn btn-large btn-disqus"  style="display:none"><i class="icon-comments"></i> <span id="i18n_hide_comments">Hide comments</span></button>
+
+        <div id="disqus_show_btn" style="margin-top:5px; display:none">
+            <button class="btn btn-primary btn-large btn-disqus" style="display:none"><i
+                    class="icon-comments"></i> <span id="i18n_show_comments">Show comments</span></button>
+            <button class="btn btn-large btn-disqus" style="display:none"><i class="icon-comments"></i> <span
+                    id="i18n_hide_comments">Hide comments</span></button>
         </div>
         <div id="disqus_thread" style="margin-top:5px;display:none"></div>
-        </div>
-            </div>
-        <!-- End of Question and Submission DIV (column) -->
-</div><!-- End of Skeleton Row -->
+    </div>
+
+<!-- End of Question and Submission DIV (column) -->
+</div>
+<!-- End of Skeleton Row -->
 
 <script type="text/javascript">
     // function loadDisqus() {
