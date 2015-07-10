@@ -182,7 +182,7 @@
                     // continue as soon as the image is loaded
                     deferred.resolve(task);
                 });
-                //img.attr('src', task.info.img).css('height', 460);
+                img.attr('src', task.info.img);
                 img.addClass('img-polaroid');
                 task.info.image = img;
             }
