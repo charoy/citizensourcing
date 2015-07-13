@@ -51,6 +51,10 @@
             </div>
             <div class="row" style="margin-top:10px; margin-bottom:10px">
                 <div class="span6" style="margin-left:75%">
+                    <p>
+                        <label for="amount">Level:</label>
+                        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                    </p>
                     <div id="slider" style="height:150px;cursor:pointer"></div>
                 </div>
                 <div class="span4">
@@ -124,6 +128,7 @@
         Disqus.</a>
     </noscript>
 
+
     <script>
         // Default language
         var userLocale = "en";
@@ -153,8 +158,12 @@
                 min: 0,
                 max: 50,
                 animate: "fast",
-                orientation: "vertical"
+                orientation: "vertical",
+                slide: function(event,ui) {
+                    $("#amount").val(ui.value);
+                }
             });
+            $("#amount").val($("#slider").slider("value"));
         });
         function i18n_translate() {
             var ids = Object.keys(messages[userLocale]);
