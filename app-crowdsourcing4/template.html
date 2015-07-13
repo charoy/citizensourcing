@@ -53,9 +53,9 @@
                 <div class="span6" style="margin-left:75%">
                     <p>
                         <label for="amount">Level:</label>
-                        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;width:25px">
                     </p>
-                    <div id="slider" style="height:150px;cursor:pointer"></div>
+                    <div id="slider-vertical" style="height:150px;cursor:pointer"></div>
                 </div>
                 <div class="span4">
                 <button class="btn btn-primary btn-large btn-answer btn-disqus" style="margin-left:90%;margin-top:10px">submit</button>
@@ -153,7 +153,7 @@
         // Update userLocale with server side information
         $(document).ready(function () {
             userLocale = document.getElementById('PYBOSSA_USER_LOCALE').textContent.trim();
-            $("#slider").slider({
+            $("#slider-vertical").slider({
                 value: 0,
                 min: 0,
                 max: 50,
@@ -163,7 +163,7 @@
                     $("#amount").val(ui.value);
                 }
             });
-            $("#amount").val($("#slider").slider("value"));
+            $("#amount").val($("#slider-vertical").slider("value"));
         });
         function i18n_translate() {
             var ids = Object.keys(messages[userLocale]);
@@ -208,8 +208,8 @@
                 $("#photo-link").attr("href", task.info.img);
                 $('#task-id').html(task.id);
                 $('.btn-answer').off('click').on('click', function (evt) {
-                    var answer = $("#slider").slider("value");
-                    $("#slider").slider("value", 0);
+                    var answer = $("#slider-vertical").slider("value");
+                    $("#slider-vertical").slider("value", 0);
                     if (typeof answer != 'undefined') {
                         pybossa.saveTask(task.id, answer).done(function () {
                             deferred.resolve();
