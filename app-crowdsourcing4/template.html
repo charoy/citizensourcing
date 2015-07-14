@@ -209,7 +209,7 @@
                 $('#task-id').html(task.id);
                 $('.btn-answer').off('click').on('click', function (evt) {
                     var answer = $("#slider-vertical").slider("value");
-                    $("#slider-vertical").slider("value", 0);
+                    $("#slider-vertical").slider("value",25);
                     if (typeof answer != 'undefined') {
                         pybossa.saveTask(task.id, answer).done(function () {
                             deferred.resolve();
