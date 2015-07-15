@@ -154,7 +154,7 @@
         $(document).ready(function () {
             userLocale = document.getElementById('PYBOSSA_USER_LOCALE').textContent.trim();
             $("#slider-vertical").slider({
-                value: 0,
+                value: 25,
                 min: 0,
                 max: 50,
                 animate: "fast",
@@ -210,6 +210,7 @@
                 $('.btn-answer').off('click').on('click', function (evt) {
                     var answer = $("#slider-vertical").slider("value");
                     $("#slider-vertical").slider("value",25);
+                    $("#amount").val($("#slider-vertical").slider("value"));
                     if (typeof answer != 'undefined') {
                         pybossa.saveTask(task.id, answer).done(function () {
                             deferred.resolve();
