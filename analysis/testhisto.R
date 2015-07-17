@@ -7,5 +7,5 @@ aggscore <- aggregate(runs$info,by=list(runs$task_id), FUN=list,rm=T)
 
 aggscore
 
-hist(runs$info, xlab = "Grade",
-  main = "Histogram of Photo Scores")
+
+boxplot(info~task_id,data=runs,main="score by photo")
